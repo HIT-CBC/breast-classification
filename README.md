@@ -1,42 +1,10 @@
-# A multimodal model for the diagnosis and subgroups in luminal breast cancer  
+# Classification of subgroups with immune characteristics based on DNA methylation in luminal breast cancer 
 
-We developed a sequential multimodal model for the diagnosis and subgroups of luminal BC. A weakly supervised deep learning framework named BSNet was trained for     diagnosis in luminal BC based on multi-view unlabeled mammography of 2321 mammography cases (9284 images) and validated on the real-world external heterogeneous cohor
-
-
-## Getting Started
-Python3, pytorch>=1.8.0,torchvision>=0.7.0 are required for the current codebase
-```
-pip3 install torch==1.8.2+cu102 torchvision==0.9.2+cu102 torchaudio===0.8.2 -f https://download.pytorch.org/whl/lts/1.8/torch_lts.html
-```
-## Data preparation
-
-The mammography images are placed according to the following categories
-```
-------Patient 1
-         ------Patient 1_L_CC.png
-         ------Patient 1_R_CC.png
-         ------Patient 1_L_MLO.png
-         ------Patient 1_R_MLO.png
-------Patient 2
-         ------Patient 2_L_CC.png
-         ------Patient 2_R_CC.png
-         ------Patient 2_L_MLO.png
-         ------Patient 2_R_MLO.png
-         
-------Patient 3
-         ------Patient 3_L_CC.png
-         ------Patient 3_R_CC.png
-         ------Patient 3_L_MLO.png
-         ------Patient 3_R_MLO.png
-...         
-
-```
-
-## Demo
+Luminal breast cancer (BC) is a large proportion with highly heterogeneous across patients in BC. It is a challenge of the precise subtype and optimal selection of treatment options in the lu-minal BC. In the study, we proposed a framework MSBR, integrating DNA methylation profile and transcriptome to identify immune subgroups of luminal BC. MSBR was implemented both on a key module scoring algorithm and “Boruta” feature selection method by DNA methylation. Luminal A was divided into two subgroups and luminal B into three subgroups using MSBR. Furthermore, these subgroups were defined different immune subgroups in luminal A and B respectively. The subgroups had significant differences in DNA methylation levels, immune microenvironment (immune cell infiltration, immune checkpoint PD1/PDL1 expression, im-mune cell cracking activity (CYT)) and pathology features (Texture, Eccentricity, Intensity and tumor-infiltrating lymphocytes (TILs)). The results also found that there is a subgroup both in luminal A and B that has the benefit from immunotherapy. This study proposed to classify lu-minal breast cancer from the perspective of epigenetics and immune characteristics, which pro-vided individualized treatment decisions.
 
 
-* Train model:`bash ./run.sh`
-* validate BSNet model:  `python test.py`  
+
+
 
 ## R code
 
